@@ -33,6 +33,26 @@ function ProductPage() {
   const variant = variants[variantIdx];
 
   if (isLoading) return <div className="flex min-h-[60vh] items-center justify-center"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" /></div>;
+  if (!product && handle === "scarpin-nude-elegance") return (
+    <main className="mx-auto max-w-7xl px-6 py-12">
+      <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="h-4 w-4" />Voltar</Link>
+      <div className="mt-8 grid gap-12 md:grid-cols-2">
+        <div className="overflow-hidden rounded-lg bg-muted"><img src="/scarpin-nude-elegance.jpg" alt="Scarpin nude de bico fino e salto alto" className="aspect-[4/5] w-full object-cover" /></div>
+        <div className="md:pt-8">
+          <p className="text-xs uppercase tracking-[0.25em] text-primary">Sapatos • Prévia da coleção</p>
+          <h1 className="mt-3 font-display text-4xl md:text-5xl">Scarpin Nude Elegance</h1>
+          <p className="mt-4 text-2xl">R$ 300,00</p>
+          <p className="mt-8 leading-relaxed text-muted-foreground">Um clássico indispensável para quem valoriza elegância e sofisticação. O Scarpin Nude Elegance combina um design de bico fino com salto alto e acabamento em tom nude, criando um visual delicado e versátil. Ideal para ocasiões especiais, ambientes profissionais e composições modernas.</p>
+          <div className="mt-8 rounded-lg border border-border bg-card p-5">
+            <p className="font-medium">Produto em prévia</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Este item já está apresentado no catálogo de demonstração. A compra, o estoque e o checkout serão ativados depois do cadastro e da configuração do produto na plataforma da loja.</p>
+          </div>
+          <Button size="lg" className="mt-6 w-full md:w-auto md:px-12" disabled>Disponível em breve</Button>
+        </div>
+      </div>
+    </main>
+  );
+
   if (!product) return (
     <div className="mx-auto max-w-xl px-6 py-24 text-center">
       <h1 className="font-display text-3xl">Produto não encontrado</h1>
