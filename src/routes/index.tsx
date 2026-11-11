@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [filter, setFilter] = useState(0);
-  const { data: products, isLoading, isError } = useQuery(productsQuery(FILTERS[filter].query));
+  const { data: products, isLoading, isError } = useQuery(productsQuery(FILTERS[filter]?.query));
 
   return (
     <main>
