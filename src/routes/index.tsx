@@ -82,7 +82,7 @@ function Index() {
           <h2 className="mt-3 font-display text-4xl md:text-5xl">Scarpin Nude Elegance</h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">Um clássico indispensável para quem valoriza elegância e sofisticação.</p>
         </div>
-        <article className="mx-auto grid max-w-4xl overflow-hidden rounded-lg border border-border bg-card md:grid-cols-2">
+        <Link to="/product/$handle" params={{ handle: "scarpin-nude-elegance" }} className="mx-auto grid max-w-4xl overflow-hidden rounded-lg border border-border bg-card transition hover:border-primary md:grid-cols-2">
           <img src="/scarpin-nude-elegance.jpg" alt="Scarpin nude de bico fino e salto alto" className="h-full min-h-[320px] w-full object-cover" />
           <div className="flex flex-col justify-center p-8 md:p-10">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Sapatos • Nude</p>
@@ -92,7 +92,7 @@ function Index() {
             <button type="button" disabled className="mt-6 cursor-not-allowed rounded-full border border-border px-6 py-3 text-sm uppercase tracking-[0.15em] text-muted-foreground opacity-70">Cadastro em aprovação</button>
             <p className="mt-3 text-xs text-muted-foreground">Produto em prévia. Compra e estoque serão habilitados após o cadastro no Shopify e sua aprovação.</p>
           </div>
-        </article>
+        </Link>
       </section>
     </main>
   );
